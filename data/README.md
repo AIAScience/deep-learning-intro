@@ -11,3 +11,5 @@ Each video object has the following properties:
 * `title` (string)
 * `target_category_id` (integer, refers to category id as in categories.json)
 * `tags` (list of strings)
+
+The list of videos is shuffled
