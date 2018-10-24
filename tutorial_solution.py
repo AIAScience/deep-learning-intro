@@ -62,10 +62,12 @@ target_vectors = [vectorize_video_target(video) for video in videos]
 input_vectors = np.array(input_vectors)
 target_vectors = np.array(target_vectors)
 
-training_input_vectors = input_vectors[0:200]
-training_target_vectors = target_vectors[0:200]
-validation_input_vectors = input_vectors[200:]
-validation_target_vectors = target_vectors[200:]
+training_fraction = 0.8  # use e.g. 80 % of data for training, 20 % for validation
+split_index = int(len(input_vectors) * training_fraction)
+training_input_vectors = input_vectors[0:split_index]
+training_target_vectors = target_vectors[0:split_index]
+validation_input_vectors = input_vectors[split_index:]
+validation_target_vectors = target_vectors[split_index:]
 
 from keras.layers.core import Dense
 from keras.models import Sequential
