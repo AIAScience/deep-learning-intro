@@ -31,6 +31,9 @@ def vectorize_video_input(video):
     return input_vector
 
 
+print('The first video input in vector form looks like this:')
+print(vectorize_video_input(videos[0]))
+
 with open(os.path.join("data", "categories.json")) as json_file:
     categories = json.load(json_file)
 
@@ -54,10 +57,13 @@ def vectorize_video_target(video):
     return target_vector
 
 
-import numpy as np
+print('The first video target category in vector form looks like this:')
+print(vectorize_video_target(videos[0]))
 
 input_vectors = [vectorize_video_input(video) for video in videos]
 target_vectors = [vectorize_video_target(video) for video in videos]
+
+import numpy as np
 
 input_vectors = np.array(input_vectors)
 target_vectors = np.array(target_vectors)
