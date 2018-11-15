@@ -1,5 +1,5 @@
 This dataset contains metadata for 279 YouTube video clips. It is a small extraction of a
-dataset created by the founders of MashTime (a failed startup).
+dataset created by the founders of MashTime (a failed video website startup).
 
 Each video clip belongs to exactly one of the following categories:
 
