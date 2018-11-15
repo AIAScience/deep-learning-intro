@@ -31,7 +31,7 @@ def vectorize_video_input(video):
     return input_vector
 
 
-print('The first video input in vector form looks like this:')
+print("The first video input in vector form looks like this:")
 print(vectorize_video_input(videos[0]))
 
 with open(os.path.join("data", "categories.json")) as json_file:
@@ -45,7 +45,7 @@ pprint.pprint(categories)
 category_id_to_index = {
     category["id"]: index for index, category in enumerate(categories)
 }
-print('Category id to index in target vector:')
+print("Category id to index in target vector:")
 print(category_id_to_index)
 
 
@@ -57,7 +57,7 @@ def vectorize_video_target(video):
     return target_vector
 
 
-print('The first video target category in one-hot-vector form looks like this:')
+print("The first video target category in one-hot-vector form looks like this:")
 print(vectorize_video_target(videos[0]))
 
 input_vectors = [vectorize_video_input(video) for video in videos]
@@ -95,7 +95,7 @@ evaluation_scores = model.evaluate(validation_input_vectors, validation_target_v
 for i, metric_name in enumerate(model.metrics_names):
     print("Validation {}: {:.3f}".format(metric_name, evaluation_scores[i]))
 
-print('The last video (in the validation set):')
+print("The last video (in the validation set):")
 pprint.pprint(videos[-1])
 
 # model.predict expects a list of examples (a 2D numpy array)
@@ -103,5 +103,5 @@ pprint.pprint(videos[-1])
 output_vectors = model.predict(np.array([input_vectors[-1]]))
 output_vector = output_vectors[0]
 
-print('Output vector: {}'.format(str(output_vector)))
-print('Target vector: {}'.format(str(target_vectors[-1])))
+print("Output vector: {}".format(str(output_vector)))
+print("Target vector: {}".format(str(target_vectors[-1])))
