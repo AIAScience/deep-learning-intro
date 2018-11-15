@@ -94,3 +94,12 @@ evaluation_scores = model.evaluate(validation_input_vectors, validation_target_v
 
 for i, metric_name in enumerate(model.metrics_names):
     print("Validation {}: {:.3f}".format(metric_name, evaluation_scores[i]))
+
+print('The last video (in the validation set):')
+pprint.pprint(videos[-1])
+
+output_vectors = model.predict(np.array([validation_input_vectors[-1]]))
+output_vector = output_vectors[0]
+
+print('Output vector: {}'.format(str(output_vector)))
+print('Target vector: {}'.format(str(validation_target_vectors[-1])))
