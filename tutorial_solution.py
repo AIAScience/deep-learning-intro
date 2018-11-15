@@ -57,7 +57,7 @@ def vectorize_video_target(video):
     return target_vector
 
 
-print('The first video target category in vector form looks like this:')
+print('The first video target category in one-hot-vector form looks like this:')
 print(vectorize_video_target(videos[0]))
 
 input_vectors = [vectorize_video_input(video) for video in videos]
