@@ -12,7 +12,7 @@ Each video object has the following properties:
 * `relevant_topics` (list of strings that are freebase topic ids, assigned by YouTube)
 * `topics` (list of strings that are freebase topic ids, assigned by YouTube)
 * `title` (string, assigned by the video uploader)
-* `target_category_id` (integer, refers to category id as in categories.json)
+* `target_category_id` (integer, refers to category id as in categories.json, assigned by a MashTime founder)
 * `tags` (list of strings, assigned by the video uploader)
 
 The videos are listed in no particular order. In other words, they are shuffled.
