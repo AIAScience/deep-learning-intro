@@ -98,8 +98,10 @@ for i, metric_name in enumerate(model.metrics_names):
 print('The last video (in the validation set):')
 pprint.pprint(videos[-1])
 
-output_vectors = model.predict(np.array([validation_input_vectors[-1]]))
+# model.predict expects a list of examples (a 2D numpy array)
+# We will put only one example in our list of examples
+output_vectors = model.predict(np.array([input_vectors[-1]]))
 output_vector = output_vectors[0]
 
 print('Output vector: {}'.format(str(output_vector)))
-print('Target vector: {}'.format(str(validation_target_vectors[-1])))
+print('Target vector: {}'.format(str(target_vectors[-1])))
