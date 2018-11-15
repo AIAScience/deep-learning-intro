@@ -85,10 +85,10 @@ model.add(Dense(num_hidden_nodes, input_dim=num_tags, activation="relu"))
 model.add(Dense(num_categories, activation="softmax"))
 
 model.compile(
-    loss="categorical_crossentropy", optimizer=SGD(momentum=0.9), metrics=["accuracy"]
+    loss="categorical_crossentropy", optimizer=SGD(momentum=0.0), metrics=["accuracy"]
 )
 
-model.fit(training_input_vectors, training_target_vectors, epochs=100)
+model.fit(training_input_vectors, training_target_vectors, epochs=50)
 
 evaluation_scores = model.evaluate(validation_input_vectors, validation_target_vectors)
 
