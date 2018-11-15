@@ -1,4 +1,7 @@
-This dataset contains metadata for 279 video clips. Each video clip belongs to exactly one of the following categories:
+This dataset contains metadata for 279 YouTube video clips. It is a small extraction of a
+dataset created by the founders of MashTime (a failed startup).
+
+Each video clip belongs to exactly one of the following categories:
 
 * Cats (55 videos)
 * Magic (47 videos)
@@ -12,4 +15,4 @@ Each video object has the following properties:
 * `target_category_id` (integer, refers to category id as in categories.json)
 * `tags` (list of strings, assigned by the video uploader)
 
-The list of videos is shuffled
+The videos are listed in no particular order. In other words, they are shuffled.
