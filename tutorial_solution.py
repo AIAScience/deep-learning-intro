@@ -79,7 +79,7 @@ from keras.layers.core import Dense
 from keras.models import Sequential
 from keras.optimizers import SGD
 
-num_hidden_nodes = 20
+num_hidden_nodes = 10
 model = Sequential()
 model.add(Dense(num_hidden_nodes, input_dim=num_tags, activation="relu"))
 model.add(Dense(num_categories, activation="softmax"))
